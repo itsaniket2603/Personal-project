@@ -49,10 +49,10 @@ const Footer = () => {
                 })}
               </div>
               <div className="flex gap-3 text-lg">
-                <Link to={"https://www.instagram.com/anshaneja5/"} target="_blank"><FaSquareInstagram className="hover:scale-105"></FaSquareInstagram></Link>
-                <Link to={"https://www.quora.com/profile/Ansh-Aneja-15"} target="_blank"><FaQuora className="hover:scale-105"></FaQuora></Link>
-                <Link to={"https://www.linkedin.com/in/anshaneja5/"} target="_blank"><FaLinkedin className="hover:scale-105"></FaLinkedin></Link>
-                <Link to={"https://github.com/anshaneja5"} target="_blank"><FaGithub className="hover:scale-105"></FaGithub></Link>
+                <Link to={""} target="_blank"><FaSquareInstagram className="hover:scale-105"></FaSquareInstagram></Link>
+                <Link to={""} target="_blank"><FaQuora className="hover:scale-105"></FaQuora></Link>
+                <Link to={""} target="_blank"><FaLinkedin className="hover:scale-105"></FaLinkedin></Link>
+                <Link to={""} target="_blank"><FaGithub className="hover:scale-105"></FaGithub></Link>
               </div>
               <div></div>
             </div>

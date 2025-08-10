@@ -28,7 +28,7 @@ const ContactUsForm = () => {
       setLoading(false)
     } catch (error) {
       setLoading(false)
-      toast.success("Cant send Email")
+      toast.error("Cant send Email")
     }
   }
 
