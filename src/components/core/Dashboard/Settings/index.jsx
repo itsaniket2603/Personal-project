@@ -13,7 +13,9 @@ export default function Settings() {
             <EditProfile/>
             {/* password */}
             {/* <UpdatePassword/> */}
+            <UpdatePassword/>
             {/* delete account */}
+
             <DeleteAccount/>
         </div>
     )
