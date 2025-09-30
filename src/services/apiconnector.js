@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base axios instance
 export const axiosInstance = axios.create({
-  baseURL: "https://unpoisonable-renate-gaily.ngrok-free.dev", 
+  baseURL: "https://study-notion-backend-4.onrender.com/", 
   withCredentials: true, // enables cookie support
 });
 
