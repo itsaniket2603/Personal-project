@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Base axios instance
 export const axiosInstance = axios.create({
-  baseURL: "https://study-notion-backend-4.onrender.com/", 
+  // baseURL: "https://study-notion-backend-4.onrender.com/", 
+   baseURL: "https://study-notion-backend-7.onrender.com/api/v1"
   withCredentials: true, // enables cookie support
 });
 
