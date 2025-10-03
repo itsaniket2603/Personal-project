@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base axios instance
 export const axiosInstance = axios.create({
-  baseURL: "https://unpoisonable-renate-gaily.ngrok-free.dev/api",
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://unpoisonable-renate-gaily.ngrok-free.dev/api",
   withCredentials: true, // enables cookie support
 });
 
