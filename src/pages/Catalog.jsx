@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import Footer from '../components/common/Footer';
 import { useParams } from 'react-router-dom';
@@ -18,7 +16,7 @@ const Catalog = () => {
   const [catalogPageData, setCatalogPageData] = useState(null);
   const [categoryId, setCategoryId] = useState("");
 
-  // Fetch all categories
+  // Fetch all categories safely
   useEffect(() => {
     const getCategories = async () => {
       try {
@@ -42,19 +40,24 @@ const Catalog = () => {
     getCategories();
   }, [catalogName]);
 
-  // Fetch category page data
+  // Fetch category page data safely
   useEffect(() => {
     const getCategoryDetails = async () => {
+      if (!categoryId) return;
+
       try {
         const res = await getCatalogaPageData(categoryId);
-        console.log("Catalog Page Response:", res);
-        setCatalogPageData(res);
+        if (!res?.success) {
+          console.error("Error in category page API response:", res);
+        } else {
+          setCatalogPageData(res);
+        }
       } catch (error) {
         console.error("CATALOG PAGE DATA API ERROR:", error);
       }
     };
 
-    if (categoryId) getCategoryDetails();
+    getCategoryDetails();
   }, [categoryId]);
 
   if (loading || !catalogPageData) {
@@ -65,8 +68,7 @@ const Catalog = () => {
     );
   }
 
-  if (!loading && !catalogPageData?.success) {
-    console.error(catalogPageData);
+  if (!catalogPageData?.success) {
     return <Error />;
   }
 
